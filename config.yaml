@@ -1,0 +1,32 @@
+# Конфигурация RAG-ассистента
+
+# Путь к данным по умолчанию (файл или директория)
+data_path: "data"
+
+# ChromaDB
+chroma:
+  persist_directory: "chroma_db"
+  collection_api: "api_rag_collection"
+  collection_giga: "gigachat_rag_collection"
+
+# Chunking
+chunking:
+  chunk_size: 500
+  overlap: 100
+
+# Поиск
+search:
+  top_k: 3
+  # Порог релевантности (cosine distance). Если лучший результат хуже — ответ «не найдено»
+  # ChromaDB cosine: 0 = идентично, 2 = противоположно. Порог обычно 0.5–0.7
+  relevance_threshold: 0.6
+
+# Кеш
+cache:
+  api_db_path: "api_rag_cache.db"
+  giga_db_path: "gigachat_rag_cache.db"
+
+# Модели
+models:
+  openai: "gpt-4o-mini"
+  gigachat: "GigaChat"

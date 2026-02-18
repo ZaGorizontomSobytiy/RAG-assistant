@@ -119,6 +119,8 @@ python -m assistant_api.evaluate_ragas
 ├── requirements.txt
 ├── data/                  # Документы по умолчанию
 │   └── docs.txt
+├── docs/                  # Документация
+│   └── SECURITY_CONCEPT.md  # Концепция безопасного RAG (роли, меры, маскировка ПД)
 ├── shared/                # Общая логика
 │   ├── config.py
 │   ├── document_loader.py # Загрузка .txt, .md, .pdf, .docx
@@ -135,6 +137,10 @@ python -m assistant_api.evaluate_ragas
     ├── gigachat_client.py
     └── app.py
 ```
+
+## Документация
+
+- **[Концепция безопасного RAG](docs/SECURITY_CONCEPT.md)** — роли (администратор, аналитик, гость), меры защиты данных, предобработка с маскировкой персональных данных (детерминированные псевдонимы и ролевые метки) до отправки в LLM, схема потока и примеры применения.
 
 ## Команды в чате
 
